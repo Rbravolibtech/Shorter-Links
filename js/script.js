@@ -1,8 +1,24 @@
+const button = document.getElementById('menu-button')
+const menu = document.getElementById('menu')
+
+
+
+
 const input = document.getElementById('link-input')
 const linkForm = document.getElementById('link-form')
 const errorMsg = document.getElementById('error-msg')
 
+button.addEventListener('click',navToggle)
+
 linkForm.addEventListener('submit', formSubmit)
+
+/////////////* TOGGLE MOBILE MENU *////////////////////
+function navToggle () {
+button.classList.toggle('open')
+menu.classList.toggle('open')
+menu.classList.toggle('hidden')
+}
+
 
 // Validate a URL
 function validURL(str) {
